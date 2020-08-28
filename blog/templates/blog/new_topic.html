@@ -1,0 +1,16 @@
+{% extends 'blog/layout.html' %}
+
+{% block title %}
+New Topic
+{% endblock %}
+
+{% block body %}
+
+<p>Add a new Topic:</p>
+<form action="{% url 'blog:new_topic' %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button name="submit">Add Topic</button>
+</form>
+
+{% endblock %}

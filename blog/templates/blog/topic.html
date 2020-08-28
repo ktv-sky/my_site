@@ -1,0 +1,29 @@
+{% extends 'blog/layout.html' %}
+
+{% block title %}
+{{ topic.text }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{ topic }}</h1>
+    <h5>
+        Tags:
+        {% for tag in tags %}
+            {{ tag }};
+        {% empty %}
+            ---
+        {% endfor %}
+    </h5>
+    <ul>
+    {% for entry in entries %}
+        <li>
+            <p>{{ entry.date_added|date:'M d, Y H:i' }}</p>
+            <p>{{ entry.text }}</p>
+        {% empty %}
+            There is no entries yet.
+        {% endfor %}
+        </li>
+    </ul>
+
+
+{% endblock %}
