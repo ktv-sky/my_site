@@ -1,0 +1,19 @@
+{% extends 'blog/layout.html' %}
+
+{% block title %}
+Edit Entry
+{% endblock %}
+
+{% block body %}
+
+    <p><a href="{% url 'blog:topic' topic.id %}">{{ topic }}</a></p>
+
+    <p>Edit Entry:</p>
+
+    <form action="{% url 'blog:edit_entry' entry.id %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <button name="submit">Save changes</button>
+    </form>
+
+{% endblock %}
