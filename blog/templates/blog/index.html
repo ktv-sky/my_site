@@ -1,13 +1,15 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Home Page</title>
-    </head>
-    <body>
-        <h1>Hello, {{ user.username }}!</h1>
-        <p>This is my Blog!</p>
-        <p>
-            <a href="{% url 'blog:topics' %}">Topics</a>
-        </p>
-    </body>
-</html>
+{% extends 'blog/layout.html' %}
+
+{% block title %}
+Home page
+{% endblock %}
+
+{% block body %}
+
+    {% if user.is_authenticated %}
+        <h1>{{ user.first_name.title }}, welcome to Blog!</h1>
+    {% else %}
+        <h1>Welcome to my Blog!</h1>
+    {% endif %}
+
+{% endblock %}

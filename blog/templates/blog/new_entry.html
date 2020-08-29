@@ -8,7 +8,7 @@ New Entry
 
 <p><a href="{% url 'blog:topic' topic.id %}">{{ topic }}</a></p>
 
-<p>Add a new entry:</p>
+<p>Add a new Entry:</p>
 <form action="{% url 'blog:new_entry' topic.id %}" method="post">
     {% csrf_token %}
     {{ form.as_p }}

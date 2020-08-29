@@ -1,4 +1,4 @@
-{% extends 'users/layout.html' %}
+{% extends 'blog/layout.html' %}
 
 {% block title %}
 Register
@@ -9,7 +9,7 @@ Register
 
     {% if message %}
         <div>{{ message }}</div>
-    {% endif %}
+        {% endif %}
 
     <form action="{% url 'users:login' %}" method="POST">
         {% csrf_token %}

@@ -26,10 +26,10 @@
             There is no entries yet.
         {% endfor %}
         </li>
-        <p>
-            <a href="{% url 'blog:new_entry' topic.id %}">add new entry</a>
-        </p>
     </ul>
+    <p>
+        <a href="{% url 'blog:new_entry' topic.id %}">Add a New Entry</a>
+    </p>
 
 
 {% endblock %}
