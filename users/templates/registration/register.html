@@ -1,13 +1,8 @@
 {% extends 'blog/layout.html' %}
 
-{% block title %}
-Register
-{% endblock %}
-
-
 {% block body %}
 
-    <form action="{% url 'users:register' %}" method="POST">
+    <form method="post" action="{% url 'users:register' %}">
         {% csrf_token %}
         {{ form.as_p }}
 
@@ -15,4 +10,4 @@ Register
         <input type="hidden" name="next" value="{% url 'blog:index' %}" />
     </form>
 
-{% endblock %}
+{% endblock body %}

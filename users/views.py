@@ -1,28 +1,6 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
-
-
-def login_view(request):
-    if request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
-        user = authenticate(request, username=username, password=password)
-        if user:
-            login(request, user)
-            return redirect('blog:index')
-        else:
-            return render(request, 'users/login.html', {
-                'message': 'Invalid Credentials',
-            })
-    return render(request, 'users/login.html')
-
-
-def logout_view(request):
-    logout(request)
-    return render(request, 'users/login.html', {
-        'message': 'Logged Out',
-    })
 
 
 def register(request):
@@ -35,6 +13,6 @@ def register(request):
             login(request, new_user)
             return redirect('blog:index')
 
-    return render(request, 'users/register.html', {
+    return render(request, 'registration/register.html', {
         'form': form,
     })

@@ -1,15 +1,14 @@
 {% extends 'blog/layout.html' %}
 
-{% block title %}
-Home page
-{% endblock %}
+{% block page_header %}
+    <div class="jumbotron">
+        <h1 class="display-3">Welcome to my Blog!</h1>
 
-{% block body %}
+        <p class="lead">Make your own Learning Log, and keep a list of the
+            topics you're learning about. Whenever you learn something new
+            about a topic, make an entry summarizing what you've learned.</p>
 
-    {% if user.is_authenticated %}
-        <h1>{{ user.first_name.title }}, welcome to Blog!</h1>
-    {% else %}
-        <h1>Welcome to my Blog!</h1>
-    {% endif %}
-
-{% endblock %}
+        <a class="btn btn-lg btn-primary" href="{% url 'users:register' %}"
+            role="button">Register &raquo;</a>
+    </div>
+{% endblock page_header %}
