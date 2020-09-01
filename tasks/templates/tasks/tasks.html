@@ -1,0 +1,21 @@
+{% extends 'blog/layout.html' %}
+
+{% block page_header %}
+    <h3>Tasks</h3>
+{% endblock %}
+
+{% block body %}
+
+    <ul>
+        {% for task in tasks %}
+            <li>
+                <h5>{{ task }}</h5>
+            </li>
+        {% empty %}
+            <li><h5>There is no tasks yet.</h5></li>
+        {% endfor %}
+    </ul>
+
+    <h5><a href="{% url 'tasks:new_task' %}">Add a new task</a></h5>
+
+{% endblock %}

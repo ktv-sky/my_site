@@ -25,12 +25,13 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'blog:topics'%}">Topics</a></li>
+                        <a class="nav-link" href="{% url 'blog:topics' %}">Topics</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'tasks:tasks' %}">Tasks</a></li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <!-- <span class="navbar-text"}">Hello, {{ user.username }}.</span> -->
                             <span class="navbar-text">Hello, {{ user.username }}!</span>
                         </li>
                         <li class="nav-item">
