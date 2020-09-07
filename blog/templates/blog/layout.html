@@ -6,7 +6,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1,
             shrink-to-fit=no">
-        <title>Blog</title>
+
+        {% block head %}
+        {% endblock %}
 
         {% bootstrap_css %}
         {% bootstrap_javascript jquery='full' %}
@@ -28,6 +30,8 @@
                         <a class="nav-link" href="{% url 'blog:topics' %}">Topics</a></li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'tasks:tasks' %}">Tasks</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'blog:currency' %}">Currency</a></li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     {% if user.is_authenticated %}
@@ -52,7 +56,8 @@
 
         <main role="main" class="container">
             <div class="pb-2 mb-2 border-bottom">
-                {% block page_header %}{% endblock page_header %}
+                {% block page_header %}
+                {% endblock page_header %}
             </div>
             <div>
                 {% block body %}

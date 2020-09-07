@@ -1,12 +1,15 @@
 {% extends 'blog/layout.html' %}
 
+{% block head %}
+    <title>Edit entry</title>
+{% endblock %}
+
 
 {% block page_header %}
     <h4><a href="{% url 'blog:topic' topic.id %}">{{ topic }}</a></h4>
 {% endblock page_header %}
 
 {% block body %}
-
     <p><h5>Edit entry:</h5></p>
 
     <form action="{% url 'blog:edit_entry' entry.id %}" method='post'>
@@ -14,5 +17,4 @@
         {{ form.as_p }}
         <button name="submit">Save changes</button>
     </form>
-
 {% endblock %}

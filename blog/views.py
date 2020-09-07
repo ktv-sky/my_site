@@ -85,3 +85,6 @@ def edit_entry(request, entry_id):
 def check_topic_owner(owner, user):
     if owner != user:
         raise Http404
+
+def currency(request):
+    return render(request, 'blog/currency.html')

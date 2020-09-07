@@ -1,5 +1,9 @@
 {% extends 'blog/layout.html' %}
 
+{% block head %}
+    <title>New topic</title>
+{% endblock %}
+
 
 {% block page_header %}
     <h4>Add a new Topic:</h4>
@@ -7,7 +11,6 @@
 
 
 {% block body %}
-
 <p>
     <form action="{% url 'blog:new_topic' %}" method="POST">
         {% csrf_token %}
@@ -15,5 +18,4 @@
         <button name="submit">Add topic</button>
     </form>
 </p>
-
 {% endblock %}
