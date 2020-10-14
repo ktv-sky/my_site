@@ -8,4 +8,12 @@
 - Visit the site locally at http://localhost:8000.
 
 ## Screenshots
-![screenshots](https://imgur.com/NR1KNkw)
+![screenshot1](https://i.imgur.com/NR1KNkw.png)
+![screenshot2](https://i.imgur.com/jD47OWP.png)
+![screenshot3](https://i.imgur.com/GQxbKnP.png)
+![screenshot4](https://i.imgur.com/ZLrkxqL.png)
+![screenshot5](https://i.imgur.com/ZKcdpLa.png)
+![screenshot6](https://i.imgur.com/VXWgD2W.png)
+![screenshot7](https://i.imgur.com/2pYD7XW.png)
+![screenshot8](https://i.imgur.com/aKiIjrA.png)
+![screenshot9](https://i.imgur.com/2WYRiNh.png)
