@@ -6,3 +6,6 @@
 - Migrate the database, which is configured to be SQLite for local development.
 - Start the development server.
 - Visit the site locally at http://localhost:8000.
+
+## Screenshots
+![screenshots](https://imgur.com/NR1KNkw)
