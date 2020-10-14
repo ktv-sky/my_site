@@ -1,6 +1,6 @@
-<h1>Site with Topics, Tasks, Currency Exchange and Authentication build with Django Framework</h1>
+# Site with Topics, Tasks, Currency Exchange and Authentication build with Django Framework
 
-# Running this project locally
+## Running this project locally
 
 - Clone or download this repo.
 - Create a virtual environment, and install from requirements.txt.
