@@ -1,5 +1,7 @@
 {% extends 'blog/layout.html' %}
 
+{% load crispy_forms_tags %}
+
 {% block head %}
     <title>New topic</title>
 {% endblock %}
@@ -14,8 +16,8 @@
 <p>
     <form action="{% url 'blog:new_topic' %}" method="POST">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button name="submit">Add topic</button>
+        {{ form|crispy }}
+        <button class="btn btn-success" name="submit">Add topic</button>
     </form>
 </p>
 {% endblock %}

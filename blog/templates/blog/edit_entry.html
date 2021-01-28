@@ -1,5 +1,7 @@
 {% extends 'blog/layout.html' %}
 
+{% load crispy_forms_tags %}
+
 {% block head %}
     <title>Edit entry</title>
 {% endblock %}
@@ -14,7 +16,7 @@
 
     <form action="{% url 'blog:edit_entry' entry.id %}" method='post'>
         {% csrf_token %}
-        {{ form.as_p }}
-        <button name="submit">Save changes</button>
+        {{ form|crispy }}
+        <button class="btn btn-success" name="submit">Save changes</button>
     </form>
 {% endblock %}
