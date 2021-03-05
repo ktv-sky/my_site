@@ -1,4 +1,4 @@
-# Site with Topics, Tasks, Currency Exchange and Authentication build with Django Framework
+# Site with Topics, Tasks and Currency Exchange
 
 ## Running this project locally
 - Clone or download this repo.
